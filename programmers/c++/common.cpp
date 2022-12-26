@@ -20,19 +20,19 @@ using namespace std;
 
 int solution(vector<int> common) {
 
-  vector<int>::const_iterator it = common.cend() - 1; // 이터레이터 사용해서 마지막 원소 찾기
+  vector<int>::const_iterator it = common.cend() - 1; // iterator 사용해서 마지막 원소 찾기
   int val = *it;
 
   if((2*common.at(1)) == (common.at(0) + common.at(2))) {
     common.push_back(val + (common.at(1) - common.at(0)));
-    // 등차중항
+    // 등차중항 사용
   } else {
     common.push_back(val * (common.at(1) / common.at(0)));
-    // 등비중항
+    // 등비중항 사용
   }
 
-  vector<int>::const_iterator answer_ptr = common.cend()-1;
-  int answer = *answer_ptr;
+  vector<int>::const_iterator answer_it = common.cend()-1;
+  int answer = *answer_it;
   return answer;
 }
 
@@ -45,5 +45,5 @@ int main() {
     v.push_back(element);
   }
 
-  cout << "마지막 원소 : " << solution(v) << endl;
+  cout << "마지막에 올 숫자 : " << solution(v) << endl;
 }
