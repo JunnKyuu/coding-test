@@ -18,40 +18,32 @@
 using namespace std;
 
 
-// int solution(vector<int> common) {
-//     int answer = 0;
+int solution(vector<int> common) {
 
+  vector<int>::const_iterator it = common.cend() - 1; // 이터레이터 사용해서 마지막 원소 찾기
+  int val = *it;
 
-//     return answer;
-// }
+  if((2*common.at(1)) == (common.at(0) + common.at(2))) {
+    common.push_back(val + (common.at(1) - common.at(0)));
+    // 등차중항
+  } else {
+    common.push_back(val * (common.at(1) / common.at(0)));
+    // 등비중항
+  }
+
+  vector<int>::const_iterator answer_ptr = common.cend()-1;
+  int answer = *answer_ptr;
+  return answer;
+}
 
 
 int main() {
   vector<int> v;
-  int element,count = 0;
+  int element= 0;
 
   while(cin >> element) {
     v.push_back(element);
   }
 
-  vector<int>::const_iterator it = v.cbegin();
-
-  cout << "v : ";
-
-  for(vector<int>::const_iterator it = v.cbegin(); it != v.cend(); it++) {
-    cout << *it << " ";
-    count++;
-  }
-
-  cout << "\n";
-
-  for(int i = 1; i<=count; i++) {
-    if((2*v[i]) == (v[i-1] + v[i+1])) {
-      v[count + 1] = v[count] + (v[i] - v[i-1]);
-    } else {
-      v[count + 1] = v[count] * (v[i+1] / v[i]);
-    }
-  }
-
-  cout << "마지막 원소 : " << v[count+1] << endl;
+  cout << "마지막 원소 : " << solution(v) << endl;
 }
