@@ -56,7 +56,6 @@ int main() {
   int num, total = 0; // 연속된 정수 개수, 정수의 합
   vector<int> answer;
 
-
   cin >> num;
   cin >> total;
 
