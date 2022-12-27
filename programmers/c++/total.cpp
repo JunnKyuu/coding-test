@@ -28,17 +28,33 @@ using namespace std;
 
 int main() {
   int num, total = 0; // 연속된 정수 개수, 정수의 합
+  int index = 0;
   vector<int> answer;
 
 
   cin >> num;
   cin >> total;
 
-  if(num % 2 == 0) {
-    // 개수가 짝수일 때
+  if(num % 2 != 0) {
+    // 개수가 홀수일 때
+    index = (total/num) - (num/2);
+    
+    for(int i = index; i<index + num; i++) {
+      answer.push_back(i);
+    }
     
   } else {
-    // 개수가 홀수일 때
+    // 개수가 짝수일 때
+    index = (total/num) - (num/2) + 1;
 
+    for(int i = index; i<index + num; i++) {
+      answer.push_back(i);
+    }
   }
+
+  for(vector<int>::const_iterator it = answer.cbegin(); it != answer.cend(); it++) {
+    cout << *it << " ";
+  }
+  
+  cout << "\n";
 }
