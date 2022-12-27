@@ -27,20 +27,9 @@ num	total	result
 using namespace std;
 
 
-// vector<int> solution(int num, int total) {
-//   vector<int> answer;
-//   return answer;
-// }
-
-
-int main() {
-  int num, total = 0; // 연속된 정수 개수, 정수의 합
-  int index = 0;
+vector<int> solution(int num, int total) {
   vector<int> answer;
-
-
-  cin >> num;
-  cin >> total;
+  int index = 0; // 연속하는 수의 시작값
 
   if(num % 2 != 0) {
     // 개수가 홀수일 때
@@ -58,6 +47,21 @@ int main() {
       answer.push_back(i);
     }
   }
+
+  return answer;
+}
+
+
+int main() {
+  int num, total = 0; // 연속된 정수 개수, 정수의 합
+  int index = 0;
+  vector<int> answer;
+
+
+  cin >> num;
+  cin >> total;
+
+  answer = solution(num, total);
 
   for(vector<int>::const_iterator it = answer.cbegin(); it != answer.cend(); it++) {
     cout << *it << " ";
