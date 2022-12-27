@@ -54,7 +54,6 @@ vector<int> solution(int num, int total) {
 
 int main() {
   int num, total = 0; // 연속된 정수 개수, 정수의 합
-  int index = 0;
   vector<int> answer;
 
 
