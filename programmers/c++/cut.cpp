@@ -18,19 +18,25 @@ M	N	result
 
 
 #include <iostream>
-#include <vector>
 
 
 using namespace std;
 
 
-int solution(int M, int N) {
+int solution(int width, int height) {
   int answer = 0;
 
+  answer = (width-1) + (height-1) * (width);
+  
   return answer;
 }
 
 
 int main() {
-  
+  int width,height,answer = 0; // 폭, 높이, 총 자르는 횟수
+
+  cin >> width;
+  cin >> height;
+
+  cout << solution(width,height);
 }
