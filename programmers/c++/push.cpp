@@ -33,5 +33,39 @@ using namespace std;
 
 
 int main() {
+  string str1, str2;
+  int answer = 0;
+  bool check = false;
+
+  cin >> str1;
+  cin >> str2;
+
+  // hello -> ohell -> lohel -> ... 이런식으로 비교하면서 같으면 answer 출력
   
+  if(str1 == str2) {
+    answer = 0;
+  } else {
+    for(int i = 0; i<str1.size()-1; i++) {
+      char s = str1[str1.size()-1];
+      str1 = str1.substr(0, str1.size()-1);
+      str1 = s + str1;
+
+      answer++;
+
+      if(str1 == str2) {
+        check = true;
+        break;
+      } else {
+        // empty
+      }
+    }
+  }
+
+  if(check == true) {
+    // empty
+  } else {
+    answer = -1;
+  }
+
+  cout << "answer : " << answer << endl;
 }
