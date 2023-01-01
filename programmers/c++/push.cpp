@@ -19,29 +19,17 @@ A를 밀어서 B가 될 수 있다면 몇 번 밀어야 하는지 횟수를 retu
 
 #include <iostream>
 #include <string>
-#include <vector>
 
 
 using namespace std;
 
 
-// int solution(string A, string B) {
-//     int answer = 0;
+int solution(string str1, string str2) {
+  // hello -> ohell -> lohel -> ... 이런식으로 비교하면서 같으면 answer 출력
 
-//     return answer;
-// }
-
-
-int main() {
-  string str1, str2;
   int answer = 0;
   bool check = false;
 
-  cin >> str1;
-  cin >> str2;
-
-  // hello -> ohell -> lohel -> ... 이런식으로 비교하면서 같으면 answer 출력
-  
   if(str1 == str2) {
     answer = 0;
   } else {
@@ -67,5 +55,15 @@ int main() {
     answer = -1;
   }
 
-  cout << "answer : " << answer << endl;
+  return answer;
+}
+
+
+int main() {
+  string str1, str2;
+
+  cin >> str1;
+  cin >> str2;
+
+  cout << "answer : " << solution(str1,str2) << endl;
 }
