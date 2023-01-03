@@ -30,5 +30,24 @@ using namespace std;
 
 
 int main() {
+    int n = 0;
+    string str,tmp;
+    vector<string> v;
 
+    cin >> str;
+    cin >> n;
+
+    for(int i = 0; i<str.size(); i++) {
+        tmp = str.substr(0,n);
+        v.push_back(tmp);
+
+        str = str.substr(n,str.size()-1);
+        i = i + n;
+    }
+
+    for(vector<string>::const_iterator it = v.cbegin(); it != v.cend(); it++) {
+        cout << *it << " ";
+    }   
+
+    cout << "\n";
 }
