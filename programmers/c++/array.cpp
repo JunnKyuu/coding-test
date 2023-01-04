@@ -23,35 +23,37 @@ my_str을 길이 n씩 잘라서 저장한 배열을 return하도록 solution 함
 using namespace std;
 
 
-// vector<string> solution(string my_str, int n) {
-//     vector<string> answer;
-//     return answer;
-// }
+vector<string> solution(string my_str, int n) {
+    vector<string> answer;
+    int count = (my_str.size()-1)/n+1;
+    int index = 0;
+    
+    while(count--){
+        if(count==0) {
+            answer.push_back(my_str.substr(index)); 
+        } else {
+            answer.push_back(my_str.substr(index, n));
+        }
+        index+=n;
+    }
+
+    return answer;
+}
 
 
 int main() {
+    string str; // 입력받을 문자열
     int n = 0; // 자를 개수
-    string str,tmp; // 입력받는 문자열, 임시저장할 문자열
-    vector<string> v; // 문자를 저장할 벡터
+    vector<string> v; // 저장할 벡터
 
     cin >> str;
     cin >> n;
 
-    for(int i = 0; i<str.size()-1;) {
-        tmp = str.substr(0,n);
-        str = str.substr(n,str.size()-1);
-        v.push_back(tmp);
-
-        if(i<=str.size()) {
-            i+=n;
-        } else {
-            v.push_back(str);
-        }
-    }
+    v = solution(str, n);
 
     for(vector<string>::const_iterator it = v.cbegin(); it != v.cend(); it++) {
         cout << *it << " ";
-    }   
+    }
 
     cout << "\n";
 }
