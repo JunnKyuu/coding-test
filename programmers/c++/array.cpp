@@ -30,19 +30,23 @@ using namespace std;
 
 
 int main() {
-    int n = 0;
-    string str,tmp;
-    vector<string> v;
+    int n = 0; // 자를 개수
+    string str,tmp; // 입력받는 문자열, 임시저장할 문자열
+    vector<string> v; // 문자를 저장할 벡터
 
     cin >> str;
     cin >> n;
 
-    for(int i = 0; i<str.size(); i++) {
+    for(int i = 0; i<str.size()-1;) {
         tmp = str.substr(0,n);
+        str = str.substr(n,str.size()-1);
         v.push_back(tmp);
 
-        str = str.substr(n,str.size()-1);
-        i = i + n;
+        if(i<=str.size()) {
+            i+=n;
+        } else {
+            v.push_back(str);
+        }
     }
 
     for(vector<string>::const_iterator it = v.cbegin(); it != v.cend(); it++) {
