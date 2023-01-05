@@ -28,13 +28,13 @@ vector<string> solution(string my_str, int n) {
     int count = (my_str.size()-1)/n+1;
     int index = 0;
     
-    while(count--){
-        if(count==0) {
+    while(count --){
+        if(count == 0) {
             answer.push_back(my_str.substr(index)); 
         } else {
             answer.push_back(my_str.substr(index, n));
         }
-        index+=n;
+        index += n;
     }
 
     return answer;
