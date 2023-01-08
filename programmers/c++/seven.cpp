@@ -15,6 +15,7 @@
 
 
 #include <iostream>
+#include <string>
 #include <vector>
 
 
@@ -30,26 +31,27 @@ using namespace std;
 
 
 int main() {
-  vector<int> v;
   int num, count = 0;
+  string tmp;
+  vector<int> vint;
+  vector<string> vstr;
 
   while(cin >> num) {
-    v.push_back(num);
+    vint.push_back(num);
   }
 
-  for(vector<int>::const_iterator it = v.cbegin(); it != v.cend(); it++) {
-    cout << *it << " ";
+  for(int i = 0; i<vint.size(); i++) {
+    tmp = to_string(vint[i]);
+    vstr.push_back(tmp);
   }
 
-  cout << "\n";
-
-  for(int i = 0; i<v.size(); i++) {
-    if(v[i] == 7) {
+  for(int i = 0; i<vstr.size(); i++) {
+    if(vstr[i] == "7") {
       count++;
     } else {
       //empty
     }
   }
 
-  cout << "7 : " << count << endl;
+  cout << "7의 개수 : " << count << endl;
 }
