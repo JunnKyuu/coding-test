@@ -22,23 +22,10 @@
 using namespace std;
 
 
-// int solution(vector<int> array) {
-//   int answer = 0;
-
-
-//   return answer;
-// }
-
-
-int main() {
-  int num, count = 0; // 입력할 정수, 7의 개수
+int solution(vector<int> vint) {
+  int count = 0; // 입력할 정수, 7의 개수
   string tmp; // 임시로 저장할 문자열
-  vector<int> vint; // 정수를 저장할 벡터
   vector<string> vstr; // 문자열을 저장할 벡터
-
-  while(cin >> num) {
-    vint.push_back(num);
-  }
 
   for(int i = 0; i<vint.size(); i++) {
     tmp = to_string(vint[i]); // to_string 함수로 정수를 문자열로 바꾸기
@@ -57,5 +44,17 @@ int main() {
     } // 바꾼 문자열에 '7'이 포함되면 개수 증가
   }
 
-  cout << "7의 개수 : " << count << endl;
+  return count;
+}
+
+
+int main() {
+  int num = 0; // 입력할 정수
+  vector<int> vint; // 정수를 저장할 벡터
+
+  while(cin >> num) {
+    vint.push_back(num);
+  }
+
+  cout << "7의 개수 : " << solution(vint) << endl;
 }
