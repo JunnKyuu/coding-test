@@ -19,6 +19,7 @@ my_string	  result
 */
 
 
+#include <algorithm>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -35,17 +36,19 @@ using namespace std;
 
 
 int main() {
-  string str;
+  string str; // 입력받을 문자열
 
   cin >> str;
 
   for(int i = 0; i<str.size(); i++) {
-    if(('A' <= str[i]) || (str[i] <= 'Z')) {
+    if(('A' <= str[i]) && (str[i] <= 'Z')) {
       str[i] = str[i] - 'A' + 'a';
+      // str[i]가 대문자이면 소문자로 변환
     } else {
       // empty
+      // 소문자면 그대로
     }
-  } 
+  }
 
-  cout << str << endl;  
+  cout << str << endl;
 }
