@@ -21,6 +21,7 @@ t시간 후 세균의 수를 return하도록 solution 함수를 완성해주세�
 
 
 #include <iostream>
+#include <cmath> // pow함수를 쓰기 위한 헤더
 #include <string>
 #include <vector>
 
@@ -28,6 +29,19 @@ t시간 후 세균의 수를 return하도록 solution 함수를 완성해주세�
 using namespace std;
 
 
-int main() {
+int solution(int n, int t) {
+  int total = 0; // 총 세균 수
 
+  total = n * pow(2, t); // pow(2, t) --> 2의 t승을 나타낸다.
+
+  return total;
+}
+
+
+int main() {
+  int n, t = 0; // 세균 수, 시간
+
+  cin >> n >> t;
+
+  cout << t << "시간 후 총 세균 수 : " << solution(n, t) << endl;
 }
