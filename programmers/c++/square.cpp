@@ -18,20 +18,29 @@
 
 
 #include <iostream>
-#include <string>
-#include <vector>
+#include <cmath>
 
 
 using namespace std;
 
 
-int solution(int n) {
-  int answer = 0;
+// int solution(int n) {
+//   int answer = 0;
 
-  return answer;
-}
+//   return answer;
+// }
 
 
 int main() {
+  int squared, result = 0; // 입력받을 정수, 제곱수 판별 결과
 
+  cin >> n;
+
+  if() {
+    // n이 제곱수일 경우
+  } else {
+    // 아닐 경우
+  }
+
+  cout << result << endl;
 }
