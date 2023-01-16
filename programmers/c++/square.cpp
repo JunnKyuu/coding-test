@@ -24,23 +24,27 @@
 using namespace std;
 
 
-// int solution(int n) {
-//   int answer = 0;
+int solution(int n) {
+  int answer = 0;
 
-//   return answer;
-// }
+  if(sqrt(n) == (float)sqrt(n)) {
+    // n이 제곱수일 경우
+    // sqrt함수는 제곱근을 구하는 함수
+    // n의 제곱근이 정수 == 실수이면 n은 제곱수
+    answer = 1;
+  } else {
+    // 아닐 경우
+    answer = 0;
+  }
+
+  return answer;
+}
 
 
 int main() {
-  int squared, result = 0; // 입력받을 정수, 제곱수 판별 결과
+  int n = 0; // 입력받을 정수
 
   cin >> n;
 
-  if() {
-    // n이 제곱수일 경우
-  } else {
-    // 아닐 경우
-  }
-
-  cout << result << endl;
+  cout << "제곱수 판별 결과 : " << solution(n) << endl;
 }
