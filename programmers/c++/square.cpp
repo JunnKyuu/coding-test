@@ -34,7 +34,7 @@ int solution(int n) {
     answer = 1;
   } else {
     // 아닐 경우
-    answer = 0;
+    answer = 2;
   }
 
   return answer;
