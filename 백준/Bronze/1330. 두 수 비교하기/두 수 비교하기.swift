@@ -1,15 +1,9 @@
-import Foundation
+let input = readLine()!
+let stringArr = input.split(separator: " ")
 
-let num = readLine()!
+let a = Int(stringArr[0])!
+let b = Int(stringArr[1])!
 
-let numArr = num.components(separatedBy: " ")
-let a = Int(numArr[0])!
-let b = Int(numArr[1])!
-
-if (a > b) {
-    print(">")
-} else if (a == b) {
-    print("==")
-} else {
-    print("<")
-}
+if(a > b) { print(">") }
+if(a < b) { print("<") }
+if(a == b) { print("==") }
