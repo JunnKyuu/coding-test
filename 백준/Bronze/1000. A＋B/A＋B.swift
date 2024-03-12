@@ -1,8 +1,7 @@
-import Foundation
+let input = readLine()!
+let stringArr = input.split(separator: " ")
 
-let line = readLine()!
-let lineArr = line.components(separatedBy: " ")
-let a = Int(lineArr[0])!
-let b = Int(lineArr[1])!
+let num1 = Int(stringArr[0])!
+let num2 = Int(stringArr[1])!
 
-print(a + b)
+print(num1 + num2)
