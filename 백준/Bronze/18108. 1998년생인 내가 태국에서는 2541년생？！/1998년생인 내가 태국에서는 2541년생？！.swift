@@ -1,8 +1,4 @@
-import Foundation
-
 let input = readLine()!
+let year = Int(input)!
 
-let inputArr = input.components(separatedBy: " ")
-let year = Int(inputArr[0])!
-
-print(year - 543)
+print(year - (2541 - 1998))
