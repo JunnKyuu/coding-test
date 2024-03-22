@@ -1,6 +1,3 @@
-import Foundation
+let input = readLine()!
 
-let name = readLine()!
-let str: String = "??!"
-
-print(name + str)
+print(input + "??!")
