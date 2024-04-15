@@ -1,10 +1,8 @@
-import Foundation
-
 let input = readLine()!
+let valueArr = input.split(separator: " ")
 
-let inputArr = input.components(separatedBy: " ")
-let a = Int(inputArr[0])!
-let b = Int(inputArr[1])!
-let c = Int(inputArr[2])!
+let numA = Int(valueArr[0])!
+let numB = Int(valueArr[1])!
+let numC = Int(valueArr[2])!
 
-print(a + b + c)
+print(numA + numB + numC)
