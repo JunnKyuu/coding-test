@@ -1,10 +1,10 @@
 # [level 0] 한 번만 등장한 문자 - 120896 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120896?language=swift) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120896?language=python3) 
 
 ### 성능 요약
 
-메모리: 16.3 MB, 시간: 0.34 ms
+메모리: 9.25 MB, 시간: 0.04 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2025년 10월 29일 01:15:50
+2025년 10월 29일 01:23:08
 
 ### 문제 설명
 
